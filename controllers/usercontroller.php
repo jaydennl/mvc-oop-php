@@ -35,12 +35,12 @@ class UserController {
 $controller = new UserController();
 $controller->register();
 
-// Automatisch inloggen van de gebruiker
+
 $userId = $conn->lastInsertId();
 $_SESSION['user_id'] = $userId;
 $_SESSION['gebruikersnaam'] = $gebruikersnaam;
 
-// Redirect naar de homepage
+
 header("Location: ../views/index2.php");
 exit();
 ?>
